@@ -29,6 +29,10 @@ jobs:
         with:
           sdk: 2.19.6
       # - uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          architecture: x64
 
       - name: Install dependencies
         run: flutter pub get
