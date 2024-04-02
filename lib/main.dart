@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tests/presentation/home_page.dart';
+import 'package:flutter_tests/presentation/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Testing'),
+      title: "Flutter Testing",
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const LoginScreen(),
     );
   }
 }

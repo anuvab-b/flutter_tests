@@ -23,7 +23,12 @@ void main() {
             ()=>mockHTTPClient
               .get(Uri.parse("https://jsonplaceholder.typicode.com/users/1")),
         ).thenAnswer((invocation) async {
-          return Response('''{}''', 200);
+          return Response('''{
+           "id": 1,
+           "name": "Leanne Graham",
+           "username": "Bret",
+           "email": "Sincere@april.biz"
+          }''', 200);
         });
         // Act
         final user = await userRepository.getUser();
