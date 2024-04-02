@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'counter.dart';
+import '../counter.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
