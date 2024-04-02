@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_tests/presentation/home_page.dart';
+import 'package:flutter_tests/presentation/counter_screen.dart';
 
 void main() {
   testWidgets(
       "Given Counter is 0 when button is clicked then counter should be 1",
       (widgetTester) async {
-    await widgetTester.pumpWidget(const MaterialApp(home: MyHomePage(title: "Counter App")));
+    await widgetTester.pumpWidget(const MaterialApp(home: CounterScreen()));
     final counter = find.text("0");
     expect(counter, findsNWidgets(1));
 
@@ -26,6 +26,5 @@ void main() {
     expect(counter3, findsNothing);
     
     expect(find.byType(AppBar), findsOneWidget);
-
   });
 }

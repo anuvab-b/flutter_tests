@@ -33,6 +33,13 @@ class _AnimationScreenState extends State<AnimationScreen> with SingleTickerProv
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          title: const Text("Users"),
+          leading: IconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              icon: const Icon(Icons.keyboard_arrow_left_outlined))),
       body: AnimatedBuilder(animation: _controller, builder: (context,child){
         return Center(child: Container(
           width: _widthAnimation.value,
